@@ -4,6 +4,7 @@ from .models import Ingredients, Recipes, Tag
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 
+
 @admin.register(Recipes)
 class RecipeAdmin(admin.ModelAdmin):
     list_display = (
@@ -11,6 +12,7 @@ class RecipeAdmin(admin.ModelAdmin):
         'author',
     )
     list_filter = ('author', 'name', 'tags',)
+
 
 class IngredientsResource(resources.ModelResource):
 
